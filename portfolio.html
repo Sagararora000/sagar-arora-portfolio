@@ -872,16 +872,32 @@
                         </a>
                     </div>
                     <div class="social-links">
-                        <a href="#" aria-label="GitHub"
+                        <a
+                            href="https://github.com/Sagararora000"
+                            aria-label="GitHub"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             ><i class="fab fa-github"></i
                         ></a>
-                        <a href="#" aria-label="LinkedIn"
+                        <a
+                            href="https://www.linkedin.com/in/sagar-arora-261010217/"
+                            aria-label="LinkedIn"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             ><i class="fab fa-linkedin-in"></i
                         ></a>
-                        <a href="#" aria-label="Twitter"
+                        <a
+                            href="https://x.com/aroraSagar000"
+                            aria-label="Twitter"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             ><i class="fab fa-twitter"></i
                         ></a>
-                        <a href="#" aria-label="Instagram"
+                        <a
+                            href="https://www.instagram.com/sagar.arora000/"
+                            aria-label="Instagram"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             ><i class="fab fa-instagram"></i
                         ></a>
                     </div>
@@ -993,9 +1009,41 @@
                     My Work
                 </div>
                 <h2>Featured Projects</h2>
-                <p>Here are some of the projects I've worked on.</p>
+                <p>Here are some of the latest live projects I've worked on.</p>
             </div>
             <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop"
+                            alt="Business Website"
+                        />
+                    </div>
+                    <div class="project-content">
+                        <h3>Business Website</h3>
+                        <p>
+                            Modern and responsive business website built for
+                            Silicone distribution company
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">WordPress</span>
+                        </div>
+                        <div class="project-links">
+                            <a
+                                href="https://www.cedrussilicone.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="fas fa-external-link-alt"></i> Live
+                                Demo</a
+                            >
+                            <a href=""><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="project-card fade-in">
                     <div class="project-image">
                         <img
@@ -1004,18 +1052,21 @@
                         />
                     </div>
                     <div class="project-content">
-                        <h3>E-Commerce Website</h3>
+                        <h3>Battery Manufacturing Business Website</h3>
                         <p>
-                            Full-stack e-commerce platform with cart, checkout,
-                            and admin dashboard.
+                            Modern and responsive business website built for
+                            Battery Manufacturing company
                         </p>
                         <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="#"
+                            <a
+                                href="https://www.sukoyaenergy.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 ><i class="fas fa-external-link-alt"></i> Live
                                 Demo</a
                             >
@@ -1041,34 +1092,6 @@
                             <span class="tag">React</span>
                             <span class="tag">Express</span>
                             <span class="tag">MySQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#"
-                                ><i class="fas fa-external-link-alt"></i> Live
-                                Demo</a
-                            >
-                            <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <div class="project-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop"
-                            alt="Business Website"
-                        />
-                    </div>
-                    <div class="project-content">
-                        <h3>Business Website</h3>
-                        <p>
-                            Modern and responsive business website built for a
-                            digital agency.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
                         </div>
                         <div class="project-links">
                             <a href="#"
@@ -1349,10 +1372,11 @@
             // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
                 anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+
                     e.preventDefault();
-                    const target = document.querySelector(
-                        this.getAttribute('href'),
-                    );
+                    const target = document.querySelector(href);
                     if (target) {
                         target.scrollIntoView({
                             behavior: 'smooth',
